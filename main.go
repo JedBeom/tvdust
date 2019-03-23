@@ -6,8 +6,8 @@ import (
 
 func Run() {
 	server := http.Server{
-		Addr:              ":8080",
-		Handler:           nil,
+		Addr:    ":8080",
+		Handler: nil,
 	}
 
 	http.HandleFunc("/", index())
@@ -21,5 +21,6 @@ func Run() {
 
 func main() {
 	loadConfig()
-	Run()
+	go Run()
+	open()
 }
