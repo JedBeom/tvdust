@@ -1,6 +1,7 @@
 package main
 
 import (
+	"github.com/kpango/glg"
 	"os/exec"
 	"runtime"
 )
@@ -15,6 +16,6 @@ func open() {
 
 	_, err := cmd.Output()
 	if err != nil {
-		panic(err)
+		_ = glg.Error(err)
 	}
 }

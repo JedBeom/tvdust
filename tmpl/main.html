@@ -10,6 +10,7 @@
             background-color: {{.Bg}};
             overflow-x: hidden;
             overflow-y: hidden;
+            font-family: 'Noto Sans KR', serif;
 
         }
         div {
@@ -45,13 +46,15 @@
             font-size: 8vw;
         }
     </style>
+    <link href="https://fonts.googleapis.com/css?family=Noto+Sans+KR:900" rel="stylesheet">
+    <link rel="stylesheet" href="static/animate.css">
 </head>
 <body>
 
 <div>
     <h3 id="msg" class="shadow">지금 미세먼지는...</h3>
-    <h1 id="grade" class="shadow">{{.Grade}}</h1>
-    <h3 id="time" class="shadow">전력 아이돌</h3>
+    <h1 id="grade" class="shadow heartBeat infinite">{{.Grade}}</h1>
+    <h3 id="time" class="shadow">Brand New The@ter!</h3>
 </div>
 
 <script src="static/lengthMyth.js"></script>

@@ -30,11 +30,11 @@ func index() http.HandlerFunc {
 		if err != nil {
 			_ = glg.Error(err, "station: 연향동")
 
-			q, err = airq.NowByStation("장천")
+			q, err = airq.NowByStation("장천동")
 			if err != nil {
 				_ = glg.Error(err, "station: 장천동")
 
-				err = t.Execute(w, Data{Grade: "문제발생!", Bg: "#FD99E1"})
+				err = t.Execute(w, Data{Grade: "모름", Bg: "#FD99E1"})
 				return
 			}
 

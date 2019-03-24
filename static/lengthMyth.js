@@ -18,9 +18,12 @@ function zero(a) {
     }
 }
 
+
+
+
 let span = document.getElementById('time');
 
-let day = new Date().getDay();
+let day = new Date().getDate();
 let month = new Date().getMonth();
 
 day = zero(day);
