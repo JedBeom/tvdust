@@ -2,6 +2,7 @@ package main
 
 import (
 	"net/http"
+	"os"
 )
 
 func Run() {
@@ -21,6 +22,11 @@ func Run() {
 
 func main() {
 	loadConfig()
-	go Run()
-	open()
+
+	if len(os.Args) > 1 {
+		Run()
+	} else {
+		go Run()
+		open()
+	}
 }

@@ -8,7 +8,10 @@ import (
 
 type Config struct {
 	AirqKey string `json:"airq_key"`
+	Browser string `json:"browser"`
 }
+
+var c Config
 
 func loadConfig() {
 	file, err := ioutil.ReadFile("config.json")
@@ -16,7 +19,6 @@ func loadConfig() {
 		panic(err)
 	}
 
-	var c Config
 	err = json.Unmarshal(file, &c)
 	if err != nil {
 		panic(err)
